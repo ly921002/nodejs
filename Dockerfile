@@ -24,7 +24,7 @@ RUN npm install --omit=dev
 COPY . .
 
 # ===== 默认端口（HTTP 服务）=====
-EXPOSE 30000
+EXPOSE 3000
 
 # ===== 启动 =====
 CMD ["node", "index.js"]
