@@ -1,7 +1,7 @@
 const fs = require('fs');
 const os = require('os');
-const { downloadFile } = require('../core/download');
-const { retry } = require('../core/utils');
+const { downloadFile } = require('./core/download');
+const { retry } = require('./core/utils');
 
 function arch() {
   return os.arch().includes('arm') ? 'arm' : 'amd';
