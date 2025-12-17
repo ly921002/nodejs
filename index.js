@@ -23,7 +23,7 @@ const { startServer } = require('./server/http');
 
     await downloadXray(xray, process.env.XRAY_VERSION);
     await downloadCloudflared(cf, process.env.CLOUDFLARED_VERSION);
-    await downloadKomari(komari, process.env.KOMARI_VERSION || '1.1.40');
+    await downloadKomari(komari, process.env.KOMARI_VERSION);
 
     writeConfig(cfg, process.env.UUID, process.env.ARGO_PORT || 8001);
 
