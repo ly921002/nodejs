@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # ===== 先拷贝 package 文件（利用缓存）=====
 COPY package*.json ./
-RUN npm install --omit=dev
+RUN npm ci --omit=dev
 
 # ===== 拷贝源码 =====
 COPY . .
