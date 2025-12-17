@@ -1,5 +1,5 @@
 const express = require('express');
-const state = require('./core/state');
+const state = require('../core/state');
 
 function startServer(port, subPath) {
   const app = express();
