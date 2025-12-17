@@ -18,7 +18,7 @@ function startServer(port, subPath) {
       res.send(html);
     } catch (err) {
       // 如果读取失败（文件不存在等），返回基础状态
-      res.send('Service is running. Visit /' + SUB_PATH);
+      res.send(`Service is running. Visit /${subPath}`);
     }
   });
   app.listen(port);
