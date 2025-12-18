@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  app:
+    image: ghcr.io/ly921002/node:latest
+    container_name: node
+    restart: unless-stopped
+    network_mode: host     # 使用宿主机网络
+    ports:
+      - "3000:3000"
+    environment:
+      UUID: 
+      ARGO_AUTH: ey
+      ARGO_DOMAIN: domain
+      KOMARI_ENDPOINT: https://KOMARI
+      KOMARI_TOKEN: 
+      XRAY_VERSION: "25.12.8"
+      CLOUDFLARED_VERSION: "2025.11.1"
+      KOMARI_VERSION: "1.1.40"
+      SUB_PATH: sub
+      FILE_PATH: /tmp
+      ARGO_PORT : 8001
+      CFIP : ip.sb
+      CFPORT : 443
+  
